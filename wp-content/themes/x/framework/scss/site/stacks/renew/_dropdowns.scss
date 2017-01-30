@@ -1,0 +1,130 @@
+// =============================================================================
+// SCSS/SITE/STACKS/RENEW/_DROPDOWNS.SCSS
+// -----------------------------------------------------------------------------
+// Styling for dropdowns in various instances.
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+//   01. Dropdown Menu
+//   03. Hover State
+//   03. Active State
+//   04. Superfish Styles
+// =============================================================================
+
+// The Dropdown Menu
+// =============================================================================
+
+//
+// 1. None by default, but block on menu open.
+// 2. Override default <ul>.
+//
+
+.x-navbar {
+  .sub-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none; // 1
+    float: left;
+    min-width: 250px;
+    margin: 0; // 2
+    padding: $dropdownPadding;
+    @include font-size(1.2);
+    list-style: none;
+    background-color: $navbarBackground;
+    z-index: $zindexDropdown;
+    @include translate3d(0, 0, 0);
+    @include background-clip(padding-box);
+
+    li {
+      position: relative;
+
+      > a {
+        display: block;
+        padding: $dropdownLinkPadding;
+        line-height: 2;
+        white-space: nowrap;
+        color: $navbarLinkColor;
+        @include transition(#{none});
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        @include opacity(0.125);
+      }
+
+      &:before {
+        top: 0;
+        height: 1px;
+      }
+
+      &:last-child:after {
+        bottom: -1px;
+        height: 1px;
+      }
+    }
+  }
+}
+
+
+
+// Hover State
+// =============================================================================
+
+.x-navbar {
+  .sub-menu li > a:hover {
+    text-decoration: none;
+  }
+}
+
+
+
+// Superfish Styles
+// =============================================================================
+
+.sf-menu ul {
+  position: absolute;
+  top: -9999em;
+}
+
+.sf-menu li {
+  position: relative;
+}
+
+.sf-menu li:hover {
+  visibility: inherit;
+}
+
+.sf-menu a {
+  position: relative;
+}
+
+.sf-menu a .sf-sub-indicator {
+  position: absolute;
+  top: -9999em;
+}
+
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+  left: 0;
+  top: $superfishFirstDropdownTop;
+  z-index: 9999;
+}
+
+.sf-menu li:hover li ul,
+.sf-menu li.sfHover li ul {
+  top: -9999em;
+}
+
+.sf-menu li li:hover ul,
+.sf-menu li li.sfHover ul {
+  left: $superfishSubmenuOffset;
+  top: $superfishSubmenuTop;
+}

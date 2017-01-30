@@ -1,0 +1,134 @@
+// =============================================================================
+// SCSS/SITE/STACKS/INTEGRITY/_DROPDOWNS.SCSS
+// -----------------------------------------------------------------------------
+// Styling for dropdowns in various instances.
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+//   01. Dropdown Menu
+//   03. Hover State
+//   03. Active State
+//   04. Superfish Styles
+//   05. Portfolio Filters
+// =============================================================================
+
+// The Dropdown Menu
+// =============================================================================
+
+//
+// 1. None by default, but block on menu open.
+// 2. Override default <ul>.
+//
+
+.x-navbar {
+  .sub-menu {
+    position: absolute;
+    right: 0;
+    display: none; // 1
+    float: left;
+    min-width: 200px;
+    margin: 0; // 2
+    padding: $dropdownPadding;
+    @include font-size(1.2);
+    list-style: none;
+    background-color: $dropdownBackground;
+    z-index: $zindexDropdown;
+    border-radius: 4px;
+    @include background-clip(padding-box);
+    @include box-shadow($dropdownBoxShadow);
+
+    a {
+      display: block;
+      clear: both;
+      padding: $dropdownLinkPadding;
+      line-height: $baseLineHeight;
+      white-space: nowrap;
+      color: $dropdownLinkColor;
+      @include transition(#{none});
+    }
+  }
+}
+
+
+
+// Hover State
+// =============================================================================
+
+.x-navbar {
+  .sub-menu li > a:hover {
+    text-decoration: none;
+    color: $dropdownLinkColorHover;
+    background-color: $dropdownLinkBackgroundHover;
+  }
+}
+
+
+
+// Active State
+// =============================================================================
+
+.x-navbar {
+  .sub-menu .current-menu-item > a {
+    background-color: $dropdownLinkBackgroundHover;
+  }
+}
+
+
+
+// Superfish Styles
+// =============================================================================
+
+.sf-menu ul {
+  position: absolute;
+  top: $superfishFirstDropdownTop;
+}
+
+.sf-menu li {
+  position: relative;
+}
+
+.sf-menu li:hover {
+  visibility: inherit;
+}
+
+.sf-menu a {
+  position: relative;
+}
+
+.sf-menu a .sf-sub-indicator {
+  position: absolute;
+  top: -9999em;
+}
+
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+  left: 0;
+  top: $superfishFirstDropdownTop;
+  z-index: 9999;
+}
+
+.sf-menu li:hover li ul,
+.sf-menu li.sfHover li ul {
+
+}
+
+.sf-menu li li:hover ul,
+.sf-menu li li.sfHover ul {
+  left: $superfishSubmenuOffset;
+  top: $superfishSubmenuTop;
+}
+
+
+
+// Portfolio Filters
+// =============================================================================
+
+.x-portfolio-filters-menu {
+  display: none;
+}
+
+.no-js .x-portfolio-filters-menu {
+  display: block;
+}

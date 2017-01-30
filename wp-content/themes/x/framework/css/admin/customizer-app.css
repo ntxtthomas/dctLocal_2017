@@ -1,0 +1,149 @@
+/* =============================================================================
+// CSS/ADMIN/CUSTOMIZER-APP.CSS
+// -----------------------------------------------------------------------------
+// Special styles for the Theme Customizer.
+// ========================================================================== */
+
+/* =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+//   01. Base Styles
+// ========================================================================== */
+
+/* Base Styles
+// ========================================================================== */
+
+.customize-control {
+  margin-bottom: 21px;
+}
+
+#customize-control-x_integrity_topbar_transparency_enable,
+#customize-control-x_integrity_navbar_transparency_enable,
+#customize-control-x_icon_post_standard_colors_enable,
+#customize-control-x_icon_post_standard_color,
+#customize-control-x_icon_post_image_colors_enable,
+#customize-control-x_icon_post_image_color,
+#customize-control-x_icon_post_gallery_colors_enable,
+#customize-control-x_icon_post_gallery_color,
+#customize-control-x_icon_post_video_colors_enable,
+#customize-control-x_icon_post_video_color,
+#customize-control-x_icon_post_audio_colors_enable,
+#customize-control-x_icon_post_audio_color,
+#customize-control-x_icon_post_quote_colors_enable,
+#customize-control-x_icon_post_quote_color,
+#customize-control-x_icon_post_link_colors_enable,
+#customize-control-x_icon_post_link_color,
+#customize-control-x_custom_font_subsets,
+#customize-control-x_custom_font_subset_cyrillic,
+#customize-control-x_custom_font_subset_greek,
+#customize-control-x_custom_font_subset_vietnamese,
+#customize-control-x_headings_uppercase_enable,
+#customize-control-x_footer_bottom_display,
+#customize-control-x_footer_menu_display,
+#customize-control-x_footer_social_display,
+#customize-control-x_portfolio_enable_facebook_sharing,
+#customize-control-x_portfolio_enable_twitter_sharing,
+#customize-control-x_portfolio_enable_google_plus_sharing,
+#customize-control-x_portfolio_enable_linkedin_sharing,
+#customize-control-x_portfolio_enable_pinterest_sharing,
+#customize-control-x_portfolio_enable_reddit_sharing,
+#customize-control-x_woocommerce_product_tab_description_enable,
+#customize-control-x_woocommerce_product_tab_additional_info_enable {
+  margin-bottom: 0;
+}
+
+#customize-control-x_slider_sub_title_1 {
+  margin-top: 0;
+}
+
+#customize-control-x_woocommerce_product_tab_description_enable {
+  margin-top: -21px;
+}
+
+.customize-control-radio {
+  padding: 0;
+}
+
+.customize-control-radio label {
+  line-height: 25px;
+}
+
+.customize-control input[type="text"],
+.customize-control select {
+  width: 100%;
+}
+
+.customize-control-image .dropdown {
+  width: 100%;
+}
+
+.customize-control-image .dropdown-content {
+  float: none;
+}
+
+.customize-control-image .dropdown-status {
+  max-width: none;
+}
+
+.customize-control-image .dropdown-arrow:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+}
+
+.accordion-section .customize-control-image .preview-thumbnail img {
+  width: auto;
+  max-width: 100%;
+  max-height: none;
+}
+
+.wp-color-result {
+  top: 0;
+}
+
+.wp-color-result:focus,
+.wp-color-result:active {
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.customize-control-sub-title {
+  margin: 40px 0 8px;
+}
+
+.customize-sub-title {
+  display: block;
+  margin: 0 -20px;
+  border: 1px solid #eee;
+  border-left: 0;
+  border-right: 0;
+  padding: 9px 20px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #444;
+  background: #f5f5f5;
+}
+
+.customize-description {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #888;
+}
+
+.customize-description span {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2a93c2;
+}
+
+#customize-section-x_customizer_section_output_css,
+#accordion-section-x_customizer_section_output_css,
+#customize-control-display_header_text {
+  display: none;
+}

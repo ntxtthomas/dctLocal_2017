@@ -1,0 +1,28 @@
+// =============================================================================
+// SCSS/CONTENT-DOCK-INTEGRITY-DARK.SCSS
+// -----------------------------------------------------------------------------
+// Contains all styles for the Integrity (dark version) content dock.
+// =============================================================================
+
+// =============================================================================
+// TABLE OF CONTENTS
+// -----------------------------------------------------------------------------
+//   01. Functions, Variables, and Mixins
+//   02. Content Dock
+// =============================================================================
+
+// Functions, Variables, and Mixins
+// =============================================================================
+
+@import "site/inc/functions";
+@import "site/inc/variables";
+@import "site/stacks/integrity/inc/variables-dark";
+@import "site/inc/mixins";
+@import "site/stacks/integrity/inc/mixins";
+
+
+
+// Content Dock
+// =============================================================================
+
+@import "site/stacks/integrity/content-dock";
